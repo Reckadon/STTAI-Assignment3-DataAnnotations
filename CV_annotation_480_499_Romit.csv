@@ -1,21 +1,21 @@
-"annotation_id","annotator","choice","created_at","id","image","lead_time","updated_at"
-40,"1","Trucks","2025-01-26T13:07:19.599174Z",14420,"/data/upload/4/e5e55a2e-img_499.jpg",12.315,"2025-01-26T13:07:19.599207Z"
-39,"1","No Trucks","2025-01-26T13:07:02.387239Z",14421,"/data/upload/4/704a6da4-img_498.jpg",9.609,"2025-01-26T13:07:02.387267Z"
-38,"1","No Trucks","2025-01-26T13:06:47.574728Z",14422,"/data/upload/4/33190698-img_497.jpg",9.624,"2025-01-26T13:06:47.574763Z"
-37,"1","Trucks","2025-01-26T13:06:32.656934Z",14423,"/data/upload/4/4373c387-img_496.jpg",20.928,"2025-01-26T13:06:32.656963Z"
-36,"1","No Trucks","2025-01-26T13:06:06.196339Z",14424,"/data/upload/4/bace7ebd-img_495.jpg",7.444,"2025-01-26T13:06:06.196371Z"
-35,"1","No Trucks","2025-01-26T13:05:53.892533Z",14425,"/data/upload/4/12e61b60-img_494.jpg",23.22,"2025-01-26T13:05:53.892566Z"
-34,"1","Trucks","2025-01-26T13:05:23.982704Z",14426,"/data/upload/4/79d42977-img_493.jpg",3.732,"2025-01-26T13:05:23.982795Z"
-33,"1","Trucks","2025-01-26T13:05:13.651640Z",14427,"/data/upload/4/3eb8b2d6-img_492.jpg",3.324,"2025-01-26T13:05:13.651678Z"
-32,"1","Trucks","2025-01-26T13:05:04.770563Z",14428,"/data/upload/4/4cadeece-img_491.jpg",3.339,"2025-01-26T13:05:04.770599Z"
-31,"1","No Trucks","2025-01-26T13:04:56.507160Z",14429,"/data/upload/4/47d1ab4a-img_490.jpg",23.984,"2025-01-26T13:04:56.507189Z"
-30,"1","Trucks","2025-01-26T13:04:26.289414Z",14430,"/data/upload/4/4e88e152-img_489.jpg",8.192,"2025-01-26T13:04:26.289469Z"
-29,"1","No Trucks","2025-01-26T13:04:11.937739Z",14431,"/data/upload/4/dc0b70ff-img_488.jpg",11.722,"2025-01-26T13:04:11.939232Z"
-28,"1","No Trucks","2025-01-26T13:03:54.366309Z",14432,"/data/upload/4/9bd5b9b3-img_487.jpg",11.864,"2025-01-26T13:03:54.366339Z"
-27,"1","Trucks","2025-01-26T13:03:35.517765Z",14433,"/data/upload/4/231bdb42-img_486.jpg",5.182,"2025-01-26T13:03:35.517794Z"
-26,"1","Trucks","2025-01-26T13:03:25.293116Z",14434,"/data/upload/4/8370a5ac-img_485.jpg",3.116,"2025-01-26T13:03:25.293146Z"
-25,"1","No Trucks","2025-01-26T13:03:14.410624Z",14435,"/data/upload/4/752094ff-img_484.jpg",8.892,"2025-01-26T13:03:14.410667Z"
-24,"1","Trucks","2025-01-26T13:02:58.086865Z",14436,"/data/upload/4/9d83e1e6-img_483.jpg",4.556,"2025-01-26T13:02:58.086902Z"
-23,"1","No Trucks","2025-01-26T13:02:47.939683Z",14437,"/data/upload/4/6d07d05e-img_482.jpg",10.759,"2025-01-26T13:02:47.939723Z"
-22,"1","Trucks","2025-01-26T13:02:29.606032Z",14438,"/data/upload/4/bc8ab73e-img_481.jpg",18.973,"2025-01-26T13:02:29.606061Z"
-21,"1","Trucks","2025-01-26T13:02:01.091677Z",14439,"/data/upload/4/75624b7c-img_480.jpg",53.021,"2025-01-26T13:02:01.091702Z"
+image_name,annotator_choice
+img_480.jpg,Trucks
+img_481.jpg,Trucks
+img_482.jpg,No Trucks
+img_483.jpg,Trucks
+img_484.jpg,No Trucks
+img_485.jpg,Trucks
+img_486.jpg,Trucks
+img_487.jpg,No Trucks
+img_488.jpg,No Trucks
+img_489.jpg,Trucks
+img_490.jpg,No Trucks
+img_491.jpg,Trucks
+img_492.jpg,Trucks
+img_493.jpg,Trucks
+img_494.jpg,No Trucks
+img_495.jpg,No Trucks
+img_496.jpg,Trucks
+img_497.jpg,No Trucks
+img_498.jpg,No Trucks
+img_499.jpg,Trucks
