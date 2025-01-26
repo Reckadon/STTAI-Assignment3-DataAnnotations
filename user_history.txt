@@ -1,0 +1,270 @@
+    1  history
+    2  sudo apt list | grep -i python3.10
+    3  wget https://www.python.org/ftp/python/3.10.16/Python-3.10.16.tar.xz
+    4  tar -xvf Python-3.10.16.tar.xz
+    5  cd Python-3.10.16/
+    6  sudo apt-get update
+    7  sudo apt-get install build-essential
+    8  cd Python-3.10.16/
+    9  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations
+   10  clear
+   11  tmux
+   12  cd ../
+   13  git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1-stable openssl-1.1.1m
+   14  cd openssl-1.1.1m/
+   15  ./config--prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/ssl
+   16  mkdir ~/libs
+   17  ./config--prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/ssl
+   18  mkdir ~/libs/custom-openssl
+   19  ./config--prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/ssl
+   20  ./config --prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/ssl
+   21  make -j12
+   22  make install
+   23  ls ~/ssl/
+   24  rm -rf ssl
+   25  ls
+   26  git status
+   27  git restore *
+   28  cd ../
+   29  rm -rf openssl-1.1.1m/
+   30  git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1-stable openssl-1.1.1m
+   31  cd openssl-1.1.1m/
+   32  ./config --prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/libs/custom-openssl/ssl
+   33  make -j12
+   34  make install
+   35  ./config --prefix=/home/guest/libs/custom-openssl --openssldir=/home/guest/libs/custom-openssl/ssl
+   36  make install
+   37  cd ~
+   38  $ wget "http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.3.dfsg+really1.3.1.orig.tar.gz"
+   39  wget "http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.3.dfsg+really1.3.1.orig.tar.gz"
+   40  tar -xvf zlib_1.3.dfsg+really1.3.1.orig.tar.gz
+   41  cd zlib-1.3.1/
+   42  ls
+   43  ./configure --help
+   44  ./configure --prefix=/home/guest/custom-zlib
+   45  make
+   46  make install
+   47  ./configure --prefix=/home/guest/libs/custom-zlib
+   48  make
+   49  make install
+   50  ls ~/libs/custom-zlib/lib/
+   51  ./configure --prefix=/home/guest/libs/custom-zlib
+   52  make
+   53  make install
+   54  cd ~/libs/
+   55  ls
+   56  mkdir autotools
+   57  clear
+   58  ls
+   59  cd ~
+   60  wget "http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libff1_3.4.6.orig.tar.gz"
+   61  wget "http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.4.6.orig.tar.gz"
+   62  wget "http://archive.ubuntu.com/ubuntu/pool/main/m/m4/m4_1.4.19.orig.tar.xz"
+   63  tar -xvf m4_1.4.19.orig.tar.xz
+   64  cd m4-1.4.19/
+   65  clear
+   66  ./configure --prefix=/home/guest/libs/autotools/m4
+   67  make install
+   68  clear
+   69  make -j12
+   70  m
+   71  make install
+   72  export PATH=$HOME/libs:$PATH
+   73  m4
+   74  clear
+   75  ./configure --prefix=/home/guest/libs/autotools/
+   76  make all install
+   77  echo $PATH
+   78  ls /home/guest/libs/autotools/
+   79  export PATH=$HOME/libs/autotools:$PATH
+   80  rm -rf ~/libs/autotools/m4/
+   81  ./configure --prefix=/home/guest/libs/autotools/
+   82  make all install
+   83  m4
+   84  ~/libs/autotools/bin/m4
+   85  ~/libs/autotools/bin/m4 version
+   86  ~/libs/autotools/bin/m4 --version
+   87  vim ~/.bashrc
+   88  source ~/.bashrc
+   89  ./configure --prefix=/home/guest/libs/autotools/
+   90  make all install
+   91  m4
+   92  m4 --version
+   93  clear
+   94  vim ~/.bashrc
+   95  m4 --version
+   96  cd ~
+   97  clear
+   98  ls
+   99  wget "http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.72.orig.tar.xz"
+  100  wget "http://archive.ubuntu.com/ubuntu/pool/main/a/automake-1.16/automake-1.16_1.16.5.orig.tar.xz"
+  101  wget "http://archive.ubuntu.com/ubuntu/pool/main/libt/libtool/libtool_2.4.7.orig.tar.xz"
+  102  tar -xvf autoconf_2.72.orig.tar.xz
+  103  cd autoconf-2.72/
+  104  ./configure --prefix=/home/guest/libs/autotools
+  105  make all install
+  106  cd ~
+  107  tar -xvf automake-1.16_1.16.5.orig.tar.xz
+  108  shutdown now
+  109  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations
+  110  make -j12
+  111  ~/libs/custom-openssl/bin/openssl version
+  112  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/guest/libs/
+  113  ~/libs/custom-openssl/bin/openssl version
+  114  echo $LD_LIBRARY_PATH
+  115  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations -rpath=/home/guest/libs/
+  116  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations -openssl-rpath=/home/guest/libs
+  117  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations --openssl-rpath=/home/guest/libs
+  118  ./configure --help
+  119  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations --with-openssl-rpath=/home/guest/libs
+  120  make -j12
+  121  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations --with-openssl=/home/guest/libs/cutom-openssl --with-openssl-rpath=/home/guest/libs
+  122  make -j12
+  123  echo $LDFLAGS
+  124  export $LDFLAGS="-L/home/guest/libs/custom-openssl/lib/ -L/home/guest/libs/custom-openssl/lib64/"
+  125  export LDFLAGS="-L/home/guest/libs/custom-openssl/lib/ -L/home/guest/libs/custom-openssl/lib64/"
+  126  export LD_LIBRARY_PATH="/home/guest/libs/custom-openssl/lib/:/home/guest/libs/custom-openssl/lib64/"
+  127  echo $LD_LIBRARY_PATH
+  128  export CPPFLAGS="-I/home/guest/libs/custom-openssl/include -I/home/guest/libs/custom-openssl/include/openssl"
+  129  ./configure --prefix=/home/guest/python-3.10 --enable-optimizations
+  130  vim setup.py
+  131  rm -rf ~/ssl/
+  132  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-openssl/lib" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  133  make -j12
+  134  vim setup.py
+  135  clear
+  136  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-openssl/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  137  ls
+  138  cd Modules/
+  139  ls
+  140  vim zlibmodule.c
+  141  cd zlib
+  142  cd ../
+  143  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-openssl/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/ --with-zlib=/home/guest/libs/custom-zlib/
+  144  make -j12
+  145  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  146  make -j12
+  147  
+  148  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/
+  149  echo $LD_LIBRARY_PATH
+  150  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/guest/libs/
+  151  echo $LD_LIBRARY_PATH
+  152  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  153  make -j12
+  154  ls ~/libs/custom-zlib/include/
+  155  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include"
+  156  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  157  make -j12
+  158  vim setup.py
+  159  ls /home/guest/libs/custom-zlib/include/
+  160  echo $LD_LIBRARY_PATH
+  161  vim setup.py
+  162  history | grep LD
+  163  ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  164  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-zlib/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  165  make -j12
+  166  LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-zlib/include/" ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  167  export LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-zlib/include/"
+  168  echo $LDFLAGS
+  169  export LDFLAGS="${LDFLAGS} -Wl,-rpath=/home/guest/libs/custom-zlib/lib/"
+  170  echo $LDFLAGS
+  171  echo $CPPFLAGS
+  172  vim setup.py
+  173  ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  174  make -j12
+  175  vim setup.py
+  176  echo $LDFLAGS
+  177  export LDFLAGS="-rpath=/home/guest/libs/custom-zlib/lib/"
+  178  echo $CPPFLAGS
+  179  echo $LDFLAGS
+  180  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib/"
+  181  vim setup.py
+  182  echo $LDFLAGS
+  183  ./configure --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  184  make -j12
+  185  make install
+  186  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  187  make -j12
+  188  make install
+  189  ~/python3.10/bin/python3.10 --version
+  190  ~/python3.10/bin/python3.10 -c "import ssl; print("hello world")"
+  191  ~/python3.10/bin/python3.10 -c 'import ssl; print("hello world")'
+  192  ~/python3.10/bin/python3.10 -c 'import zlib; print("hello world")'
+  193  ~/python3.10/bin/python3.10 -c 'import sqlite3; print("hello world")'
+  194  ./configure --prefix=/home/guest/python3.10 --enable-optimizations
+  195  which gcc
+  196  which gcc
+  197  ./configure --prefix=/home/guest/python3.10 --enable-optimizations
+  198  which gcc
+  199  ./configure --prefix=/home/guest/python3.10 --enable-optimizations
+  200  make -j12
+  201  clear
+  202  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl/
+  203  make -j12
+  204  clear
+  205  make install
+  206  make -j12
+  207  cd Python-3.10.16/
+  208  echo $LDFLAGS
+  209  echo $CPPFLAGS
+  210  export $LDFLAGS="-L/home/guest/libs/custom-zlib/lib"
+  211  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib"
+  212  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include"
+  213  ./configure --prefix=/home/guest/python3.10 --enable-optimizations
+  214  make -j12
+  215  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl
+  216  export $LDFLAGS="-L/home/guest/libs/custom-zlib/lib -L/home/guest/custom-libeffi/lib"
+  217  export $LDFLAGS="-L/home/guest/libs/custom-zlib/lib,-L/home/guest/custom-libeffi/lib"
+  218  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib,-L/home/guest/custom-libeffi/lib"
+  219  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include,-I/home/guest/custom-libeffi/include"
+  220  make -j12
+  221  echo $LDFLAGS
+  222  echo $CPPFLAGS
+  223  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib,-L/home/guest/custom-libeffi/lib,-L/home/guest/custom-openssl/lib"
+  224  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl
+  225  make -j12
+  226  echo $LDFLAGS
+  227  echo $CPPFLAGS
+  228  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include,-I/home/guest/custom-libeffi/include,-I/home/guest/libs/custom-openssl/include"
+  229  echo $LDFLAGS
+  230  echo $CPPFLAGS
+  231  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl
+  232  make -j12
+  233  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl --with-openssl-rpath=auto
+  234  make -j12
+  235  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include -I/home/guest/custom-libeffi/include -I/home/guest/libs/custom-openssl/include"
+  236  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib -L/home/guest/custom-libeffi/lib -L/home/guest/custom-openssl/lib"
+  237  echo $CPPFLAGS
+  238  echo $LDFLAGS
+  239  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl --with-openssl-rpath=auto
+  240  make -j12
+  241  echo $CPPFLAGS
+  242  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include -I/home/guest/libs/custom-libeffi/include -I/home/guest/libs/custom-openssl/include"
+  243  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib -L/home/guest/libs/custom-libeffi/lib -L/home/guest/libs/custom-openssl/lib"
+  244  echo $CPPFLAGS
+  245  echo $LDFLAGS
+  246  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl --with-openssl-rpath=auto
+  247  make -j12
+  248  make install
+  249  clear
+  250  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include -I/home/guest/libs/custom-libeffi/include -I/home/guest/libs/custom-openssl/include"
+  251  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib -L/home/guest/libs/custom-libeffi/lib -L/home/guest/libs/custom-openssl/lib"
+  252  echo $CPPFLAGS
+  253  echo $LDFLAGS
+  254  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl --with-openssl-rpath=auto
+  255  make -j12
+  256  ls ~/libs/custom-libsqlite3-dev/
+  257  export CPPFLAGS="-I/home/guest/libs/custom-zlib/include -I/home/guest/libs/custom-libeffi/include -I/home/guest/libs/custom-openssl/include -I/home/guest/libs/custom-libsqlite3-dev/include"
+  258  export LDFLAGS="-L/home/guest/libs/custom-zlib/lib -L/home/guest/libs/custom-libeffi/lib -L/home/guest/libs/custom-openssl/lib -L/home/guest/libs/custom-libsqlite3-dev"
+  259  ./configure --prefix=/home/guest/python3.10 --enable-optimizations --with-openssl=/home/guest/libs/custom-openssl --with-openssl-rpath=auto
+  260  make -j12
+  261  make install
+  262  cd ~
+  263  cd Python-3.10.16/
+  264  clear
+  265  cd ~/assignment3
+  266  python3 -m venv venv
+  267  source venv/bin/activate
+  268  pip install label-studio
+  269  label-studio start
+  270  history > user_history.txt
